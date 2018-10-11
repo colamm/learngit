@@ -1,0 +1,36 @@
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+创建版本库
+	创建空目录
+		$ mkdir learngit
+		$ cd learngit
+		$ pwd
+		/Users/michael/learngit
+	把目录变成git可以管理的仓库
+		$ git init
+		Initialized empty Git repository in /Users/michael/learngit/.git/
+把文件添加到版本库
+	把文件添加到仓库：
+		$ git add readme.txt
+	把文件提交到仓库
+		$ git commit -m "wrote a readme file"
+		[master (root-commit) eaadf4e] wrote a readme file
+		 1 file changed, 2 insertions(+)
+		 create mode 100644 readme.txt
+掌握仓库当前状态
+	 git status
+查看difference
+	$ git diff readme.txt 
+修改后：1 git add 2.git commit(可以随时用git status命令查看仓库当前状态）
+查看最近到最远的提交日志
+	git log
+	$ git log --pretty=oneline
+版本退回
+	$ git reset --hard HEAD^
+查看readme.txt内容
+	$ cat readme.txt
+版本回到未来
+	$ git reset --hard 1094a
+记录每一次命令
+	$ git reflog
